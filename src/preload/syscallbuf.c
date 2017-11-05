@@ -1256,6 +1256,7 @@ static long sys_futex(const struct syscall_info* call) {
   switch (FUTEX_CMD_MASK & op) {
     case FUTEX_WAKE:
       break;
+    case FUTEX_REQUEUE:
     case FUTEX_CMP_REQUEUE:
     case FUTEX_WAKE_OP:
       flags |= FUTEX_USES_UADDR2;
